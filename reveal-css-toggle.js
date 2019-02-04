@@ -15,8 +15,9 @@ const reveal_css_toggle = {
 
         document.addEventListener('keyup', e => {
             if (e.key !== key) { return; }
+            cssIdx++;
             linkSelectorList.forEach(
-                (selector, idx) => document.querySelector(selector).href = cssLists[++cssIdx % cssLists.length][idx]
+                (selector, idx) => document.querySelector(selector).href = cssLists[cssIdx % cssLists.length][idx]
             );
         })
     }
