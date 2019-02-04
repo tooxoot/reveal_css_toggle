@@ -1,14 +1,14 @@
 const reveal_css_toggle = {
     initialize: (options = {}) => {
         if (
-            !options.cssLists || !options.cssList.length ||
+            !options.cssLists || !options.cssLists.length ||
             !options.linkSelectorList || !options.linkSelectorList.length ||
             !options.cssLists.every(cssList => cssList.length === options.linkSelectorList.length)
         ) {
             return;
         }
 
-        const cssLists = options.cssList;
+        const cssLists = options.cssLists;
         const linkSelectorList = options.linkSelectorList;
         const key = options.key || 'c';
         let cssIdx = 0;
